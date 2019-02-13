@@ -1,4 +1,9 @@
 *~
-/debbuild
-/*.deb
-/*.tar.gz
+*.deb
+*.tar.gz
+*.lnk
+*.url
+*.desktop
+build*
+debbuild
+.vs

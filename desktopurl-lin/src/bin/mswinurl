@@ -4,7 +4,7 @@
 # author: Valery Tschopp (valery dot tschopp at gmail dot com)
 # date: 17 Feb 2013
 # description: Opens windows .url files in your current browser
-# tested: Ubuntu 12.10 (amd64)
+# tested: Ubuntu 16.04 (amd64)
 
 if [ "$#" -lt "1" ] ; then
    echo "$0: Error: missing argument"
@@ -29,7 +29,7 @@ URL=`grep -a -G ^URL=* "$1" | sed -e 's|URL=||'`
 if [ -z "$URL" ] ; then
    echo "$0: Error: 'URL=' not found in $1"
    exit 1
-fi 
+fi
 
 # open with prefered browser
 xdg-open $URL > /dev/null 2>&1
